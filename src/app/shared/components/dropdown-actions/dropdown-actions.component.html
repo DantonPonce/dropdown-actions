@@ -1,0 +1,14 @@
+<div class="dropdown-actions">
+    <button class="dropdown-toggle" (click)="toggleDropdown()">
+        <fa-icon [icon]="faEllipsisVertical"></fa-icon>
+    </button>
+    <div *ngIf="isOpen" class="dropdown-menu" (mouseleave)="isOpen = false">
+        <button 
+            *ngFor="let option of options"
+            (click)="selectOption(option)" 
+            class="dropdown-item">
+            <fa-icon [icon]="option.icon"></fa-icon>
+            {{option.title}}
+        </button>
+    </div>
+</div>

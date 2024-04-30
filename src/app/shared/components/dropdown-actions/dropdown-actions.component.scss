@@ -1,0 +1,77 @@
+
+// Escalas de Neutral
+$color-neutral-400: #323232;
+$color-neutral-300: #6E6E6E;
+$color-neutral-200: #BCBCBC;
+$color-white: #FFFFFF;
+
+:host {
+    .dropdown-actions {
+        position: relative;
+
+        button {
+            &.dropdown-toggle {
+                background: none;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                margin: 0;
+                transition: .3s;
+
+                i {
+                    &.material-symbols-rounded {
+                        font-variation-settings: "FILL" 0, "wght" 900, "GRAD" 200, "opsz" 48;
+                    }
+                }
+
+                &:hover,
+                &:active,
+                &:focus {
+                    background: $color-neutral-200;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            display: flex;
+            position: absolute;
+            width: 140px;
+            left: -109px;
+            flex-direction: column;
+            background: $color-neutral-400;
+            border-radius: 5px;
+            z-index: 1;
+            top: 35px;
+            text-align: left;
+            transition: .3s;
+            padding: 5px;
+
+            button {
+                color: $color-white;
+                font-size: .85rem;
+                cursor: pointer;
+                width: 100%;
+
+                &.dropdown-item {
+                    display: flex;
+                    margin: 0;
+                    background: none;
+                    border: none;
+                    padding: 10px 8px;
+                    cursor: pointer;
+
+                    &:hover{
+                        background: $color-neutral-300;
+                    }
+                }
+
+                fa-icon{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
